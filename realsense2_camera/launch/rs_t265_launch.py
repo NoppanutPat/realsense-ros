@@ -46,6 +46,7 @@ local_parameters = [{'name': 'device_type', 'default': 't265', 'description': 'c
                     {'name': 'enable_fisheye2',              'default': 'true', 'description': 'enable fisheye2 stream'},
                     {'name': 'topic_odom_in', 'default': '/robot_base/odom', 'description': 'topic for odom information'},
                     {'name': 'calib_odom_file', 'default': calib_odom_file_path, 'description': 'calibrate odom file'},
+                    {'name': 'publish_odom_tf', 'default': 'true', 'description': 'Publish the odom tf'},
                    ]
 
 def generate_launch_description():
