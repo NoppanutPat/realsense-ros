@@ -11,6 +11,7 @@ T265RealsenseNode::T265RealsenseNode(rclcpp::Node& node,
                                      {
                                          _monitor_options = {RS2_OPTION_ASIC_TEMPERATURE, RS2_OPTION_MOTION_MODULE_TEMPERATURE};
                                          initializeOdometryInput();
+                                         setupSubscribers();
                                      }
 
 void T265RealsenseNode::initializeOdometryInput()

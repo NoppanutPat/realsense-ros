@@ -40,6 +40,8 @@ import os
 realsense_dir = get_package_share_directory('skuba_ahr_bringup')
 calib_odom_file_path = os.path.join(os.path.join(realsense_dir, 'config'), 'calibration_odometry.json')
 
+print(calib_odom_file_path)
+
 local_parameters = [{'name': 'device_type', 'default': 't265', 'description': 'choose device by type'},
                     {'name': 'enable_pose', 'default': 'true', 'description': 'enable pose stream'},
                     {'name': 'enable_fisheye1',              'default': 'true', 'description': 'enable fisheye1 stream'},
@@ -47,6 +49,7 @@ local_parameters = [{'name': 'device_type', 'default': 't265', 'description': 'c
                     {'name': 'topic_odom_in', 'default': '/robot_base/odom', 'description': 'topic for odom information'},
                     {'name': 'calib_odom_file', 'default': calib_odom_file_path, 'description': 'calibrate odom file'},
                     {'name': 'publish_odom_tf', 'default': 'true', 'description': 'Publish the odom tf'},
+                    {'name': 'odom_frame_id', 'default': 'odom', 'description': 'Set up base frame ID'},
                    ]
 
 def generate_launch_description():
