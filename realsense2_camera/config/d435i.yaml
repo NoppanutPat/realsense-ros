@@ -6,8 +6,8 @@ camera:
         usb_port_id: ''
 
         color_fps: 30.0
-        color_height: 480
-        color_width: 640
+        color_height: 720
+        color_width: 1280
         color_qos: "SENSOR_DATA"
 
         depth_fps: 30.0

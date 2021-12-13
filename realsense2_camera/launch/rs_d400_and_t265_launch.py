@@ -21,6 +21,12 @@ import sys
 import pathlib
 sys.path.append(str(pathlib.Path(__file__).parent.absolute()))
 import rs_launch
+from ament_index_python.packages import get_package_share_directory
+import os
+
+realsense_dir = get_package_share_directory('skuba_ahr_bringup')
+calib_odom_file_path = os.path.join(os.path.join(realsense_dir, 'config'), 'calibration_odometry.json')
+
 
 local_parameters = [{'name': 'camera_name1', 'default': 'D400', 'description': 'camera unique name'},
                     {'name': 'device_type1', 'default': 'd4.', 'description': 'choose device by type'},
